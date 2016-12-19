@@ -1,0 +1,20 @@
+{
+  "name": "ui-rect",
+  "version": "0.0.1",
+  "description": "UI Rect relative position",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "keywords": [],
+  "author": {
+    "name": "RainInFall",
+    "email": "lygjcsrq@163.com",
+    "url": "https://github.com/RainInFall/ui-rect.git"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "mocha": "^3.2.0",
+    "expect": "^1.20.0"
+  }
+}
