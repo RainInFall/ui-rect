@@ -147,6 +147,54 @@ Rect.prototype.referencePoints = function() {
   ];
 };
 
+Rect.isLeftOf = function(r1, r2) {
+  if (r1.right() > r2.left()) {
+    return false;
+  }
+  var union = r1.union(r2);
+  return null === union || union.area() === 0;
+};
+
+Rect.prototype.isLeftOf = function(another) {
+  return Rect.isLeftOf(this, another);
+};
+
+Rect.isRightOf = function(r1, r2) {
+  if (r1.left() > r2.right()) {
+    return false;
+  }
+  var union = r1.union(r2);
+  return null === union || union.area() === 0;
+};
+
+Rect.prototype.isRightOf = function(another) {
+  return Rect.isRightOf(this, another);
+};
+
+Rect.isTopOf = function(r1, r2) {
+  if (r1.bottom() > r2.top()) {
+    return false;
+  }
+  var union = r1.union(r2);
+  return null === union || union.area() === 0;
+};
+
+Rect.prototype.isTopOf = function(another) {
+  return Rect.isTopOf(this, another);
+};
+
+Rect.isBottomOf = function(r1, r2) {
+  if (r1.top() > r2.bottom()) {
+    return false;
+  }
+  var union = r1.union(r2);
+  return null === union || union.area() === 0;
+};
+
+Rect.prototype.isBottomOf = function(another) {
+  return Rect.isBottomOf(this, another);
+};
+
 Rect.Point = Point;
 
 module.exports = Rect;
