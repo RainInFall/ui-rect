@@ -1,6 +1,6 @@
 {
   "name": "ui-rect",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "UI Rect relative position",
   "main": "index.js",
   "scripts": {
