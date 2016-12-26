@@ -16,5 +16,8 @@
   "devDependencies": {
     "mocha": "^3.2.0",
     "expect": "^1.20.0"
+  },
+  "dependencies": {
+    "ui-point": "0.0.6"
   }
 }
