@@ -195,6 +195,13 @@ Rect.prototype.isBottomOf = function(another) {
   return Rect.isBottomOf(this, another);
 };
 
+Rect.fromObject = function(rect) {
+  return new Rect(
+    new Point(rect.x, rect.y),
+    new Point(rect.x + rect.width, rect.y + rect.height)
+  );
+};
+
 Rect.Point = Point;
 
 module.exports = Rect;
