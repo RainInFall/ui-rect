@@ -120,8 +120,31 @@ Rect.prototype.height = function() {
   return this.bottom() - this.top();
 };
 
-Rect.prototype.aera = function() {
+Rect.prototype.area = function() {
   return this.width() * this.height();
+};
+
+Rect.equals = function(r1, r2) {
+  return r1.leftTop().equals(r2.leftTop()) && r1.rightBottom.equals(r2.rightBottom());
+};
+
+Rect.prototype.equlas = function(another) {
+  return Rect.equals(this, another);
+};
+
+Rect.prototype.referencePoints = function() {
+  var me = this;
+  return [
+    me.leftTop(),
+    me.centerTop(),
+    me.rightTop(),
+    me.leftCenter(),
+    me.center(),
+    me.rightCenter(),
+    me.leftBottom(),
+    me.centerBottom(),
+    me.rightBottom(),
+  ];
 };
 
 Rect.Point = Point;
